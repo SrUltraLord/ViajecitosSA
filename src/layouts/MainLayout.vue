@@ -28,17 +28,17 @@
 </template>
 
 <script lang="ts" setup>
-import { MenuItem } from "primevue/menuitem";
+import { MenuItem } from 'primevue/menuitem'
 
 const items: MenuItem[] = [
   { separator: true },
-  { label: "Buscar", icon: "pi pi-fw pi-search", to: { name: "home-search" } },
+  { label: 'Buscar', icon: 'pi pi-fw pi-search', to: { name: 'home-search' } },
   {
-    label: "Mis Vuelos",
-    icon: "pi pi-fv pi-shopping-bag",
-    to: { name: "home-my-flights" },
+    label: 'Mis Vuelos',
+    icon: 'pi pi-fv pi-shopping-bag',
+    to: { name: 'home-my-flights' },
   },
-];
+]
 </script>
 
 <style scoped>

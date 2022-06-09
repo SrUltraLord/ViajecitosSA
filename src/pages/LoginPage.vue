@@ -31,7 +31,7 @@
             </template>
 
             <template v-if="isInvalidField('userNui')" v-slot:error-label>
-              {{ getFieldErrorsString("userNui") }}
+              {{ getFieldErrorsString('userNui') }}
             </template>
           </InputContainer>
 
@@ -49,8 +49,8 @@
 </template>
 
 <script lang="ts" setup>
-import InputContainer from "./../components/InputContainer.vue";
-import { useUserForm } from "./../composables/useUserForm";
+import InputContainer from './../components/InputContainer.vue'
+import { useUserForm } from './../composables/useUserForm'
 
 const {
   isLoading,
@@ -61,7 +61,7 @@ const {
   isInvalidField,
   onSubmit,
   getFieldErrorsString,
-} = useUserForm();
+} = useUserForm()
 </script>
 
 <style scoped>

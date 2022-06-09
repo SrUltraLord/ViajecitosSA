@@ -40,65 +40,65 @@
 </template>
 
 <script lang="ts" setup>
-import SearchFlightForm from "../components/SearchFlightForm.vue";
-import { Flight } from "../model/Flight";
+import SearchFlightForm from '../components/SearchFlightForm.vue'
+import { Flight } from '../model/Flight'
 
 const flights: Flight[] = [
   {
     id: 1,
-    number: "AV1234",
-    cityOrigin: "UIO",
-    cityDestination: "GYE",
+    number: 'AV1234',
+    cityOrigin: 'UIO',
+    cityDestination: 'GYE',
     cost: 40.0,
-    dateDeparture: "2022-05-26",
-    timeDeparture: "08:40:17",
+    dateDeparture: '2022-05-26',
+    timeDeparture: '08:40:17',
   },
   {
     id: 2,
-    number: "AV1111",
-    cityOrigin: "MEC",
-    cityDestination: "GYE",
+    number: 'AV1111',
+    cityOrigin: 'MEC',
+    cityDestination: 'GYE',
     cost: 20.0,
-    dateDeparture: "2022-05-29",
-    timeDeparture: "17:40:57",
+    dateDeparture: '2022-05-29',
+    timeDeparture: '17:40:57',
   },
   {
     id: 3,
-    number: "AV3412",
-    cityOrigin: "CUE",
-    cityDestination: "UIO",
+    number: 'AV3412',
+    cityOrigin: 'CUE',
+    cityDestination: 'UIO',
     cost: 30.0,
-    dateDeparture: "2022-05-25",
-    timeDeparture: "08:41:15",
+    dateDeparture: '2022-05-25',
+    timeDeparture: '08:41:15',
   },
   {
     id: 4,
-    number: "CM234",
-    cityOrigin: "UIO",
-    cityDestination: "CUE",
+    number: 'CM234',
+    cityOrigin: 'UIO',
+    cityDestination: 'CUE',
     cost: 30.0,
-    dateDeparture: "2022-05-31",
-    timeDeparture: "08:41:26",
+    dateDeparture: '2022-05-31',
+    timeDeparture: '08:41:26',
   },
   {
     id: 5,
-    number: "EQ009",
-    cityOrigin: "UIO",
-    cityDestination: "GYE",
+    number: 'EQ009',
+    cityOrigin: 'UIO',
+    cityDestination: 'GYE',
     cost: 35.0,
-    dateDeparture: "2022-05-26",
-    timeDeparture: "08:40:17",
+    dateDeparture: '2022-05-26',
+    timeDeparture: '08:40:17',
   },
   {
     id: 6,
-    number: "CM312",
-    cityOrigin: "MEC",
-    cityDestination: "UIO",
+    number: 'CM312',
+    cityOrigin: 'MEC',
+    cityDestination: 'UIO',
     cost: 30.0,
-    dateDeparture: "2022-05-25",
-    timeDeparture: "10:36:39",
+    dateDeparture: '2022-05-25',
+    timeDeparture: '10:36:39',
   },
-];
+]
 </script>
 
 <style scoped></style>

@@ -16,5 +16,5 @@
 defineProps({
   icon: String,
   label: String,
-});
+})
 </script>

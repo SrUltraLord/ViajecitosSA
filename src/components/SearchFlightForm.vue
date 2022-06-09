@@ -28,11 +28,11 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref } from 'vue'
 
-const cityOrigin = ref<string>("");
-const cityDestination = ref<string>("");
-const dateRange = ref();
+const cityOrigin = ref<string>('')
+const cityDestination = ref<string>('')
+const dateRange = ref()
 </script>
 
 <style scoped></style>
