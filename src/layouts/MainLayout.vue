@@ -16,12 +16,13 @@
         icon="pi pi-sign-out"
         label="Cerrar Sesión"
         class="p-button-danger"
+        @click="logout()"
       />
     </template>
   </Menubar>
 
   <div class="w-screen flex justify-content-center">
-    <div class="content w-8">
+    <div class="content xl:w-6 lg:w-8 md:w-10 sm:w-12">
       <router-view></router-view>
     </div>
   </div>
@@ -29,6 +30,11 @@
 
 <script lang="ts" setup>
 import { MenuItem } from 'primevue/menuitem'
+import { useRouter } from 'vue-router'
+import { useAuthStore } from '../store/auth'
+
+const authStore = useAuthStore()
+const router = useRouter()
 
 const items: MenuItem[] = [
   { separator: true },
@@ -39,6 +45,11 @@ const items: MenuItem[] = [
     to: { name: 'home-my-flights' },
   },
 ]
+
+function logout() {
+  authStore.logout()
+  router.push({ name: 'auth' })
+}
 </script>
 
 <style scoped>

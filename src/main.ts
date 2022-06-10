@@ -34,4 +34,4 @@ app.component('Menubar', Menubar)
 app.component('Message', Message)
 app.component('Panel', Panel)
 
-app.use(createPinia()).use(PrimeVue).use(router).mount('#app')
+app.use(router).use(createPinia()).use(PrimeVue).mount('#app')

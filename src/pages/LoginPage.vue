@@ -13,7 +13,7 @@
       <div class="surface-card p-4 shadow-7 border-round">
         <div class="text-center mb-5">
           <img
-            src="https://via.placeholder.com/1800x400.png?text=Logo+Empresa"
+            src="https://seeklogo.com/images/M/monsters-university-logo-EC9AA5387B-seeklogo.com.png"
             alt="Image"
             class="border-round w-full"
           />
@@ -40,6 +40,7 @@
             class="w-full"
             type="submit"
             :loading="isLoading"
+            @click="onSubmit()"
           >
           </Button>
         </form>

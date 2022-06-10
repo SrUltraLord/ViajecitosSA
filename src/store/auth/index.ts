@@ -1,12 +1,12 @@
 import { defineStore, acceptHMRUpdate } from 'pinia'
+import { User } from '../../model/User'
 
-import { loginWithUsernameAndPassword } from './../../services/authService'
+import { loginWithNui } from './../../services/authService'
 
-// TODO: Add user types
 export interface AuthState {
   isLoading: boolean
   error: unknown | null
-  user: any | null
+  user: User | null
 }
 
 const state = (): AuthState => ({
@@ -18,10 +18,20 @@ const state = (): AuthState => ({
 export const useAuthStore = defineStore('auth', {
   state,
   actions: {
-    async login(userName: string, password: string) {
+    async loginWithNui(nui: string) {
       this.isLoading = true
 
-      // TODO: Login Logic
+      try {
+        const user = await loginWithNui(nui)
+        this.user = user!
+      } catch (error) {
+        this.error = error
+      } finally {
+        this.isLoading = false
+      }
+    },
+    logout() {
+      this.user = null
     },
   },
 })

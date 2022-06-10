@@ -19,7 +19,7 @@ export type ValidationRules = { [key in UserFormField]: any }
 export function useUserForm() {
   const router = useRouter()
   const authStore = useAuthStore()
-  const { isLoading } = storeToRefs(authStore)
+  const { isLoading, error } = storeToRefs(authStore)
 
   const userNui = ref<string>('')
   const hasBeenSubmitted = ref<boolean>(false)
@@ -79,12 +79,17 @@ export function useUserForm() {
 
     isMessageVisible.value = false
 
-    router.push({ name: 'home' })
+    const user = await authStore.loginWithNui(userNui.value)
+
+    if (user !== null) {
+      router.push({ name: 'home' })
+    }
   }
 
   return {
     // Store
     isLoading,
+    error,
     // Composable
     userNui,
     isMessageVisible,
