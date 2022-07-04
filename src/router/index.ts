@@ -8,6 +8,11 @@ const routes: RouteRecordRaw[] = [
   { path: '', redirect: { name: 'auth' } },
   { path: '/auth', name: 'auth', component: LoginPage },
   {
+    path: '/register',
+    name: 'register',
+    component: () => import('../pages/RegisterPage.vue'),
+  },
+  {
     path: '/home',
     name: 'home',
     redirect: { name: 'home-search' },

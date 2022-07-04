@@ -12,6 +12,8 @@
     </template>
 
     <template #end>
+      
+
       <Button
         icon="pi pi-sign-out"
         label="Cerrar Sesión"
@@ -29,14 +31,14 @@
 </template>
 
 <script lang="ts" setup>
-import { MenuItem } from 'primevue/menuitem'
+// import { MenuItem } from 'primevue/menuitem'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '../store/auth'
 
 const authStore = useAuthStore()
 const router = useRouter()
 
-const items: MenuItem[] = [
+const items: any[] = [
   { separator: true },
   { label: 'Buscar', icon: 'pi pi-fw pi-search', to: { name: 'home-search' } },
   {

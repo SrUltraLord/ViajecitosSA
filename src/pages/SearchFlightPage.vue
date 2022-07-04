@@ -22,7 +22,12 @@
     No se han encontrado vuelos con los campos ingresados...
   </Message>
 
-  <Message v-if="ticketStore.message !== null" severity="info" :life="5000">
+  <Message
+    @close="() => (ticketStore.message = null)"
+    v-if="ticketStore.message !== null"
+    severity="info"
+    :life="5000"
+  >
     {{ ticketStore.message }}
   </Message>
 </template>

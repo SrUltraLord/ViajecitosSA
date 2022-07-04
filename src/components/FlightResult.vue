@@ -57,7 +57,7 @@ function buyTicket() {
     return
   }
 
-  ticketStore.buyTicket(authStore.user?.id, flightStore.flight?.id)
+  ticketStore.buyTicket(authStore.user?.userId, flightStore.flight?.id)
   flightStore.clearFlight()
 }
 </script>
