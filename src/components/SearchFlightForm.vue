@@ -5,9 +5,7 @@
         <h5>Ciudad Origen</h5>
         <InputText v-model="cityOrigin" placeholder="AAA" />
       </div>
-
       <Divider layout="vertical" />
-
       <div class="flex-1">
         <h5>Ciudad Destino</h5>
         <InputText v-model="cityDestination" placeholder="AAA" />
@@ -15,7 +13,7 @@
 
       <Divider layout="vertical" />
 
-      <div class="flex-3">
+      <div class="flex-2">
         <h5>Fechas</h5>
         <Calendar
           v-model="dateRange.dates"
@@ -26,14 +24,16 @@
       </div>
     </div>
 
-    <Button
-      class="h-3"
-      label="Buscar"
-      icon="pi pi-search"
-      :disabled="isDisabled"
-      :loading="isLoading"
-      @click="searchFlight()"
-    />
+    <div class="flex align-items-end">
+      <Button
+        class="h-3rem"
+        label="Buscar"
+        icon="pi pi-search"
+        :disabled="isDisabled"
+        :loading="isLoading"
+        @click="searchFlight()"
+      />
+    </div>
   </div>
 </template>
 

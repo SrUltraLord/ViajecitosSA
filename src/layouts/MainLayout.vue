@@ -12,19 +12,12 @@
     </template>
 
     <template #end>
-      
-
-      <Button
-        icon="pi pi-sign-out"
-        label="Cerrar Sesión"
-        class="p-button-danger"
-        @click="logout()"
-      />
+      <Button icon="pi pi-sign-out" class="p-button-danger" @click="logout()" />
     </template>
   </Menubar>
 
   <div class="w-screen flex justify-content-center">
-    <div class="content xl:w-6 lg:w-8 md:w-10 sm:w-12">
+    <div class="content w-6">
       <router-view></router-view>
     </div>
   </div>

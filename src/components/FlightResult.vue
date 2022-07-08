@@ -34,7 +34,14 @@
         </div>
       </div>
 
-      <Button @click="buyTicket()" icon="pi pi-shopping-cart" label="Comprar" />
+      <div class="flex align-items-end">
+        <Button
+          class="h-3rem"
+          @click="buyTicket()"
+          icon="pi pi-shopping-cart"
+          label="Comprar"
+        />
+      </div>
     </div>
   </div>
 </template>

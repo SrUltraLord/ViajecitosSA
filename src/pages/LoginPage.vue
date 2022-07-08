@@ -151,12 +151,6 @@ function redirectToRegister(): void {
 </script>
 
 <style scoped>
-.form-container .message,
-.form-container .surface-card {
-  min-width: 450px;
-  max-width: 450px;
-}
-
 .redirect-link {
   color: #2563eb;
   cursor: pointer;
